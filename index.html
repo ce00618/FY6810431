@@ -4,7 +4,7 @@
     <h1><b>ENG0018 Computer Laboratory 2023/24</b></h1>
     <h2>Student URN: 6810431</h2>
     <hr>
-       <h2 style='font-family:calibri;'><b>Conference paper: Why were Mercedes-AMG Petronas so dominant in Formula One from 2014 to 2020?</b></h2>
+       <h2 style='font-family:arial;'><b>Conference paper: Why were Mercedes-AMG Petronas so dominant in Formula One from 2014 to 2020?</b></h2>
     </hr>
   
     <style>
@@ -69,5 +69,73 @@
     <b3 id='autosport2'>The car that began Mercedes' modern-era F1 success <br>Available at: <a href='https://www.autosport.com/f1/news/the-car-that-began-mercedes-modern-era-f1-success-5149433/5149433/'>https://www.autosport.com/f1/news/the-car-that-began-mercedes-modern-era-f1-success-5149433/5149433/</a><br>Accessed 30th October 2023</b3><br>
   <br>
   <br>
+  </h2 style='font-family: arial'><b>Conference Presentation: Why were Mercedes-AMG Petronas so dominant in Formula One from 2014 to 2020?</b></h2>
+  <script>
+    var slideImages=['slide1.pdf','slide2.pdf','slide3.pdf','slide4.pdf','slide5.pdf','slide6.pdf'];
+    var currentSlide = 0;
+    function showSlide() 
+      {
+        document.getElementById('slide').src=slideImage[currentSlide];
+      }
+    function nextSlide()
+      {
+        currentSlide=(currentSlide+1)%slideImages.length;
+        showSlide();
+      }
+    function backSlide()
+      {
+        currentSlide=(currentSlide-1+slideImages.length)%slideImages.length;
+        showSlide();
+      }
+    function slideNumber(slideNo)
+      {
+        currentSlide=slideNo-1;
+        showSlide();
+      }
+  </script>
+  <div id='slide_box'>
+    <img id='slide' src='slide.pdf' alt='Slide_1' style='width:100%; 
+      max-width:1600px;'>
+  <div class='button_box'>
+    <button class='button' onclick='nextSlide()'>Next</button>
+    <button class='button' onclick='backSLide()'>Back</button>
+  </div>
+  <div> class='slide_no_box'>
+    <button class='button' onclick='slideNumber(1)'>Slide 1</button>
+    <button class='button' onclick='slideNumber(2)'>Slide 2</button>
+    <button class='button' onclick='slideNumber(3)'>Slide 3</button>
+    <button class='button' onclick='slideNumber(4)'>SLide 4</button>
+    <button class='button' onclick='slideNumber(5)'>Slide 5</button>
+    <button class='button' onclick='slideNumber(6)'>Slide 6</button>
+  </div>
+  <style>
+    #slide_box
+    {
+      text-align: center;
+      position: relative;
+    }
+    .button_box
+    {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: -100px;
+    }
+    .button
+    {
+      padding 10px 20px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor:pointer;
+      margin: 0 5px;
+    }
+    .slide_no_box
+    {
+      pos
+  </style>
   </body>  
 </html>
